@@ -1,0 +1,130 @@
+.contact {
+  margin: 1rem auto 3rem;
+}
+
+
+.contact h1{
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.contact :is(h1, label, p, a, input, textarea, li)::selection {
+  background-color: #ffffff;
+  color: #2b2c34;
+}
+
+
+
+.contact-div {
+  margin: 2rem auto;
+  width: 90%;
+}
+
+.message-box {
+  background-color: #2b2c34;
+  color: #ffffff;
+  border-style: none none solid;
+  border-radius: 0;
+  border-bottom-color: #ffffff;
+}
+
+.message-box:focus {
+  border: 1px solid #ffffff;
+  outline: none;
+  background: #2b2c34;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.form-button {
+  color: #ffffff;
+  background-color: #4167c6;
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 2rem auto;
+}
+
+.form-button:hover {
+  color: #4167c6;
+  background-color: #ffffff;
+}
+
+
+.contact-form {
+  margin-top: 2rem;
+}
+
+.form-group label {
+  margin-top: 1rem;
+}
+
+.contact a {
+  color: #ffffff;
+}
+
+.contact a:hover {
+  color: #4167c6;
+}
+
+
+@media (max-width: 1367px){
+  .form-button {
+    font-size: 21px;
+  }
+
+  .contact-div{
+    width: 95%;
+  }
+  .contact{
+    margin: 1rem auto 2.5rem;
+  }
+}
+
+
+@media (max-width: 1024px){
+  .contact{
+    margin: 1rem auto 3.5rem;
+  }
+}
+
+@media (max-width: 991px){
+  .contact-form {
+    margin: 1rem auto;
+  }
+
+  .contact{
+    margin: 0 auto;
+  }
+
+  .form-button {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px){
+  .contact-form{
+    padding: 0 2rem;
+  }
+
+  .contact-div{
+    margin: 2rem auto 0;
+    width: 90%;
+  }
+
+  .form-button {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px){
+  .contact-form{
+    padding: 0 1rem;
+    margin: 1rem auto;
+  }
+
+  .form-button {
+    font-size: 16px;
+  }
+}

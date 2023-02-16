@@ -1,0 +1,110 @@
+
+.logo-div {
+  width: 5rem;
+}
+
+.logo-image {
+  width: 100%;
+}
+
+
+.resume-link {
+  border: 1px solid #2b2c34;
+  border-radius: 5px;
+}
+
+.resume-link:hover {
+  background: rgba(43, 44, 52, 0.27);
+}
+
+
+.navbar-brand {
+  color: #ffffff;
+}
+
+.navbar-brand:hover {
+  color: #2b2c34;
+}
+
+.nav-item {
+  padding: 0 2rem;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+
+.nav-link:hover {
+  color: #2b2c34;
+  font-weight: bold;
+}
+
+
+/*CSS for footer*/
+.footer {
+  text-align: center;
+  padding: 1rem;
+}
+.icon-link {
+  padding: 1rem 0.5rem 0 0;
+}
+
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: #2b2c34;
+}
+
+.footer :is(a, p)::selection {
+  background-color: #2b2c34;
+  color: #ffffff;
+}
+
+.contact a {
+  color: #ffffff;
+}
+
+.contact a:hover {
+  color: #4167c6;
+}
+
+.active-link {
+  color: #2b2c34 !important;
+  font-weight: bold;
+}
+
+@media (max-width: 1367px){
+  .logo-div {
+    width: 4rem;
+  }
+}
+
+@media (max-width: 1024px){
+  .logo-div {
+    width: 3rem;
+  }
+}
+
+@media (max-width: 991px){
+  #navbarSupportedContent .vr {
+    display: none;
+  }
+
+  .nav-link {
+    width: 5rem;
+  }
+  .logo-div {
+    width: 4rem;
+  }
+}
+
+@media (max-width: 768px){
+  .logo-div {
+    width: 3rem;
+  }
+}
+

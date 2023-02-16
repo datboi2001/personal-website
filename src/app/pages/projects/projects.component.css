@@ -1,0 +1,76 @@
+.projects {
+  margin: 1rem 0;
+}
+
+.projects h1 {
+  text-align: center;
+  margin: auto;
+}
+
+.projects :is(h1, h2, p, img, a)::selection {
+  background-color: #ffffff;
+  color: #2b2c34;
+}
+
+.projects h4 {
+  font-weight: bold;
+}
+
+.projects .card {
+  background-color: #4167c6;
+  margin: 2rem auto;
+}
+
+.projects .card-img-top {
+  margin: auto
+}
+
+
+.projects .card-text a {
+  color: #ffffff;
+}
+
+.projects .card-text a:hover {
+  color: #2b2c34;
+}
+
+.projects-button {
+  color: #ffffff;
+  background-color: #2b2c34;
+}
+
+.projects-button:hover {
+  color: #2b2c34;
+  background-color: #ffffff;
+}
+
+@media only screen and (min-width: 1920px) and (min-height: 1080px) {
+  .projects{
+    margin: 2rem;
+  }
+
+  .projects .projects-button{
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 991px){
+  .projects .card {
+    margin: 2rem 4rem;
+  }
+}
+
+
+@media (max-width: 768px){
+  .projects .card {
+    margin: 2rem 2rem;
+  }
+}
+
+
+@media (max-width: 576px){
+  .projects .card {
+    margin: 2rem 1rem;
+  }
+}

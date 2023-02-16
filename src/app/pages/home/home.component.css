@@ -1,0 +1,105 @@
+.intro {
+  font-weight: bold;
+}
+
+.intro-section {
+  margin: auto;
+  padding: 2rem;
+}
+
+.intro-section a{
+  color: #ffffff;
+}
+
+.intro-section a:hover {
+  color: #4167c6;
+  font-weight: bold;
+}
+
+.active-link {
+  color: #2b2c34 !important;
+  font-weight: bold;
+}
+
+.portrait-image {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  margin: auto;
+  padding: 2rem 4rem;
+}
+
+
+.portrait-image::selection {
+  background-color: #ffffff;
+}
+
+.intro-section :is(h1, p, li, a)::selection {
+  background-color: #ffffff;
+  color: #2b2c34;
+}
+
+/*Media queries for any screen sizes bigger than full hd resolution (1920 * 1080) */
+@media only screen and (min-width: 1920px) and (min-height: 1080px) {
+  .portrait-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .intro-section{
+    padding: 2rem 4rem;
+
+  }
+}
+
+
+@media (max-width: 1367px){
+  .portrait-image {
+    padding: 2rem 1rem;
+    width: 92%;
+    height: 92%;
+  }
+
+  .intro-section {
+    padding: 2rem 2rem;
+  }
+
+}
+
+@media (max-width: 1024px){
+  .portrait-image {
+    padding: 2rem 0;
+    width: 94%;
+    height: 94%;
+  }
+
+  .intro-section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* 991px*/
+@media (max-width: 991px){
+  .portrait-image {
+    padding: 2rem 0 2rem 4rem;
+    width: 90%;
+    height: 90%;
+  }
+}
+
+
+@media (max-width: 768px){
+  .portrait-image {
+    padding: 2rem 0 2rem 2rem;
+    width: 95%;
+    height: 95%;
+  }
+}
+
+@media (max-width: 576px){
+  .portrait-image {
+    padding: 2rem 1rem;
+    width: 97%;
+    height: 97%;
+  }
+}

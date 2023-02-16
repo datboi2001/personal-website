@@ -1,0 +1,49 @@
+<main class="contact">
+  <!--    Create a row with two columns-->
+  <h1 class="contact-title">CONTACT INFORMATION</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <div class="contact-div">
+          <!--                    Contact information with FontAwesome icons-->
+          <p class="contact-text">If you have any questions or concerns, please feel free to contact me at the
+            following:</p>
+          <ul>
+            <li>Email: <a href="mailto:manhdat07042001@gmail.com"> manhdat07042001@gmail.com</a></li>
+            <li>Phone: <a href="tel:720-742-7302">720-742-7302</a></li>
+            <li>
+              <a href="https://discordapp.com/users/426956144788111370" title="Discord" target="_blank"
+                 class="icon-link">Discord</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/manh-dat-nguyen/" title="Linkedin"
+                 target="_blank">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <!--                Create four input boxes. The first two boxes are for name and email.
+                            The third box is for phone number.-->
+        <!--                The last one is for message.-->
+        <form>
+          <div class="container">
+            <div class="form-group contact-form">
+              <label for="name">Name*</label>
+              <input class="form-control message-box" id="name" name="name" required type="text" [(ngModel)]="name">
+              <label for="email">Email*</label>
+              <input class="form-control message-box" id="email" name="email" required type="email" [(ngModel)]="email">
+              <label for="phone">Phone Number*</label>
+              <input class="form-control message-box" id="phone" name="phone"
+                     pattern="^(\+|\d)[0-9]{7,16}$" required type="tel" [(ngModel)]="phone">
+              <label for="message">Message*</label>
+              <textarea class="form-control message-box" rows="4" id="message" name="message"
+                        required [(ngModel)]="message"></textarea>
+              <button class="btn form-button" type="submit" (click)="handleSubmit()">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>

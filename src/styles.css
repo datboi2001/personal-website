@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #2b2c34;
+  color: #ffffff;
+  font-family: 'Sofia Sans', sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: normal;
+  text-align: justify;
+}
+
+header > nav > div :is(a, img)::selection {
+  background-color: #2b2c34;
+  color: #ffffff;
+}
+
+
+main {
+  min-height: 70vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-bg {
+  background-color: #4167c6;
+}
+
+@media only screen and (min-width: 1920px) and (min-height: 1080px){
+  body {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  main {
+    min-height: 85vh;
+  }
+}
+
+@media (max-height: 1069px){
+  body{
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 768px){
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px){
+  body {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,29 @@
+.footer {
+  text-align: center;
+  padding: 1rem;
+}
+.icon-link {
+  padding: 1rem 0.5rem 0 0;
+}
+
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: #2b2c34;
+}
+
+.footer :is(a, p)::selection {
+  background-color: #2b2c34;
+  color: #ffffff;
+}
+
+.contact a {
+  color: #ffffff;
+}
+
+.contact a:hover {
+  color: #4167c6;
+}
