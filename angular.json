@@ -34,6 +34,16 @@
           },
           "configurations": {
             "production": {
+              "optimization": true,
+              "outputHashing": "bundles",
+              "sourceMap": false,
+              "extractCss": true,
+              "showCircularDependencies": false,
+              "aot": true,
+              "extractLicenses": true,
+              "statsJson": false,
+              "progress": false,
+              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -45,8 +55,7 @@
                   "maximumWarning": "50kb",
                   "maximumError": "100kb"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
               "buildOptimizer": false,
