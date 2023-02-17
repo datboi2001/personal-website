@@ -37,8 +37,6 @@
               "optimization": true,
               "outputHashing": "bundles",
               "sourceMap": false,
-              "extractCss": true,
-              "showCircularDependencies": false,
               "aot": true,
               "extractLicenses": true,
               "statsJson": false,
