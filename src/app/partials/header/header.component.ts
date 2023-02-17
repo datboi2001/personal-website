@@ -18,7 +18,6 @@ export class HeaderComponent {
   ngOnInit(){
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationStart) {
-        console.log(val.url);
         this.activeLink = val.url.slice(1);
       }
     });
