@@ -7,7 +7,7 @@ import {NavigationStart, Router} from "@angular/router";
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  headerLinks = [{name: 'Home', href: "/home"}, {name: "Projects", href:"/projects"}, {name: "Contact", href:"/contact"}];
+  headerLinks = [{name: 'Home', href: "/"}, {name: "Projects", href:"/projects"}, {name: "Contact", href:"/contact"}];
   activeLink: string = '';
 
 
