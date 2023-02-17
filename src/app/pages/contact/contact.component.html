@@ -26,7 +26,9 @@
         <!--                Create four input boxes. The first two boxes are for name and email.
                             The third box is for phone number.-->
         <!--                The last one is for message.-->
-        <form>
+        <p *ngIf="success" class="message">Your message has been sent!</p>
+        <p *ngIf="failure" class="message">Your message has not been sent. Please try again.</p>
+        <form (ngSubmit)="handleSubmit()">
           <div class="container">
             <div class="form-group contact-form">
               <label for="name">Name*</label>
@@ -39,7 +41,7 @@
               <label for="message">Message*</label>
               <textarea class="form-control message-box" rows="4" id="message" name="message"
                         required [(ngModel)]="message"></textarea>
-              <button class="btn form-button" type="submit" (click)="handleSubmit()">Submit</button>
+              <button class="btn form-button" type="submit" [disabled]="formIsEmpty()">Submit</button>
             </div>
           </div>
         </form>

@@ -68,6 +68,12 @@
   color: #4167c6;
 }
 
+.message{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+
+}
 
 @media (max-width: 1367px){
   .form-button {

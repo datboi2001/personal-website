@@ -12,18 +12,33 @@ export class ContactComponent {
   email = "";
   phone = "";
   message = "";
-
+  success = false;
+  failure = false;
   constructor(private emailService: EmailApiService) {
-
   }
 
 
-  handleSubmit() {
-    console.log(this.name, this.email, this.message, this.phone)
-    const response = this.emailService.sendEmail(this.name, this.email, this.message, this.phone);
-    response.subscribe((data) => {
-      console.log(data);
-    });
+  formIsEmpty(): boolean{
+    return this.name == "" || this.email == "" || this.message == "" || this.phone == "";
+  }
+  clearForm() {
+    this.name = "";
+    this.email = "";
+    this.phone = "";
+    this.message = "";
+  }
+
+  async handleSubmit() {
+    const response = await this.emailService.sendEmail(this.name, this.email, this.message, this.phone);
+    if (response.status == 200) {
+      this.success = true;
+      this.failure = false;
+      this.clearForm();
+    }
+    else{
+      this.failure = true;
+      this.success = false;
+    }
   }
 
 

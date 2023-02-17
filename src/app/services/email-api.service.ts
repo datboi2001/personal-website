@@ -1,38 +1,31 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../environments/environment";
-
+import emailjs, {EmailJSResponseStatus} from "@emailjs/browser"
 @Injectable({
   providedIn: 'root'
 })
 export class EmailApiService {
   baseUrl = "https://api.sendgrid.com/v3/mail/send";
 
-  constructor(private httpClient: HttpClient) {
+  constructor() {
+    emailjs.init("");
   }
 
-  sender_name: string = environment.production ? "Portfolio Website" : "Portfolio Website (development)";
 
-  sendEmail(name: string, email: string, message: string, phone: string) {
-    const requestBody = {
-      "from": {
-        "email": "datthew2001@gmail.com",
-        "name": this.sender_name
-      },
-      "subject": `New message from ${this.sender_name}`,
-      "content": [{
-        "type": "text/html", "value": `<p>From: ${name}</p>
-      <p>Email: ${email}</p>
-      <p>Phone: ${phone}</p>
-     <p>Message: ${message}</p>`
-      }],
-    }
-    const headers = {
-      "Authorization": `Bearer ${environment.sendgridApiKey}`,
-      "Content-Type": "application/json"
-    }
 
-    return this.httpClient.post(this.baseUrl, requestBody, {headers: headers});
+  sendEmail(name: string, email: string, message: string, phone: string): Promise<EmailJSResponseStatus> {
+
+    const params = {
+      from_name: name,
+      from_email: email,
+      message: message,
+      phone: phone,
+      to_name: "Datthew Nguyen"
+    }
+    return emailjs.send("service_v70jsye", "template_lh3zs97", params, "s9bahsBFt5CEd8JoR").then((result) => {
+      return result;
+    }).catch((error) => {
+      return error;
+    });
 
 
   }
