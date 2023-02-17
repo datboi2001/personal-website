@@ -9,4 +9,5 @@ import {faDiscord, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 export class FooterComponent {
   faDiscord = faDiscord;
   faLinkedin = faLinkedin;
+  year = new Date().getFullYear();
 }
