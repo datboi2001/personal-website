@@ -37,7 +37,7 @@
               <input class="form-control message-box" id="email" name="email" required type="email" [(ngModel)]="email">
               <label for="phone">Phone Number*</label>
               <input class="form-control message-box" id="phone" name="phone"
-                     pattern="^(\+|\d)[0-9]{7,16}$" required type="tel" [(ngModel)]="phone">
+                     pattern="^[+]{1}(?:[0-9\-\(\)\/\.]\s?){6, 15}[0-9]{1}$" required type="tel" [(ngModel)]="phone">
               <label for="message">Message*</label>
               <textarea class="form-control message-box" rows="4" id="message" name="message"
                         required [(ngModel)]="message"></textarea>
