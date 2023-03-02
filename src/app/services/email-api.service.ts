@@ -12,7 +12,7 @@ export class EmailApiService {
 
 
 
-  sendEmail(name: string, email: string, message: string, phone: string): Promise<EmailJSResponseStatus> {
+  async sendEmail(name: string, email: string, message: string, phone: string): Promise<EmailJSResponseStatus> {
 
     const params = {
       from_name: name,
@@ -21,11 +21,15 @@ export class EmailApiService {
       phone: phone,
       to_name: "Datthew Nguyen"
     }
-    return emailjs.send("service_v70jsye", "template_lh3zs97", params, "s9bahsBFt5CEd8JoR").then((result) => {
+    try {
+      const result = await emailjs.send("service_v70jsye", "template_lh3zs97", params, "s9bahsBFt5CEd8JoR");
       return result;
-    }).catch((error) => {
-      return error;
-    });
+    } catch (error) {
+      console.log(error);
+      return new Promise<EmailJSResponseStatus>((resolve, reject) => {
+        reject(error);
+      });
+    }
 
 
   }
